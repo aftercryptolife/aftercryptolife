@@ -3,268 +3,354 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>$ACL - AfterCryptoLife</title>
+  <title>Hellish Coin Pain Dolor Style</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
-    
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+
     body {
-      font-family: 'Poppins', sans-serif;
-      margin: 0; padding: 0;
-      background: linear-gradient(135deg, #0d1117, #161b22);
-      color: #c9d1d9;
-      min-height: 100vh;
+      margin: 0;
+      height: 100vh;
+      overflow: hidden;
+      background-color: #120000;
+      font-family: 'Orbitron', monospace;
+      color: #ff4500;
       display: flex;
       flex-direction: column;
-      transition: background-color 0.7s ease;
-    }
-
-    header {
-      background: linear-gradient(90deg, #238636, #2ea043);
-      padding: 25px 20px;
-      text-align: center;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
-    }
-    header h1 {
-      margin: 0;
-      font-size: 3.8rem;
-      color: #e6fffa;
-      letter-spacing: 6px;
-      text-shadow: 0 0 10px #2ea043;
-      display: flex;
-      align-items: center;
       justify-content: center;
-      gap: 15px;
-    }
-    header p {
-      margin-top: 8px;
-      font-size: 1.4rem;
-      color: #a3f7c4;
-      font-weight: 600;
-    }
-
-    main {
-      flex: 1;
-      max-width: 850px;
-      margin: 40px auto;
-      padding: 0 20px;
-      text-align: center;
-    }
-
-    section {
-      margin-bottom: 50px;
-      background: #161b22dd;
-      padding: 25px 30px;
-      border-radius: 15px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
-    }
-
-    h2 {
-      font-size: 2.4rem;
-      margin-bottom: 25px;
-      color: #2ea043;
-      text-shadow: 0 0 6px #238636;
-      display: flex;
       align-items: center;
-      justify-content: center;
-      gap: 10px;
+      transition: background-color 0.5s ease;
+      user-select: none;
+      gap: 20px;
+      padding-bottom: 40px;
+      position: relative;
     }
 
-    /* Emoji sizing */
-    h2 span.emoji {
-      font-size: 2.8rem;
+    h1 {
+      font-size: 12vw;
+      font-weight: 900;
+      text-transform: uppercase;
+      margin: 0 0 40px 0;
+      letter-spacing: 0.2em;
+      animation: hellGlitch 2s infinite;
+      z-index: 10;
+      color: #ff4500;
+      text-shadow:
+        0 0 8px #ff4500,
+        0 0 20px #ff4500,
+        0 0 30px #ff9933,
+        0 0 40px #ff9933,
+        0 0 50px #ff4500,
+        0 0 75px #cc3300;
     }
 
-    p, li {
-      font-size: 1.2rem;
-      line-height: 1.6;
-      color: #c9d1d9;
+    @keyframes hellGlitch {
+      0% {
+        text-shadow:
+          2px 0 #cc3300,
+          -2px 0 #ff9933;
+      }
+      20% {
+        text-shadow:
+          -2px 0 #cc3300,
+          2px 0 #ff9933;
+      }
+      40% {
+        text-shadow:
+          2px 2px #ff4500,
+          -2px -2px #ff9933;
+      }
+      60% {
+        text-shadow:
+          -2px 2px #ff4500,
+          2px -2px #ff9933;
+      }
+      80% {
+        text-shadow:
+          2px -2px #cc3300,
+          -2px 2px #ff9933;
+      }
+      100% {
+        text-shadow:
+          2px 0 #cc3300,
+          -2px 0 #ff9933;
+      }
     }
 
-    ul.didYouKnow {
-      list-style: none;
-      padding-left: 0;
-      max-width: 650px;
-      margin: 0 auto;
-      text-align: left;
-      color: #a3f7c4;
-    }
-    ul.didYouKnow li {
-      background: #21262d;
-      padding: 15px 20px;
-      margin-bottom: 15px;
-      border-left: 5px solid #2ea043;
-      border-radius: 10px;
-      box-shadow: inset 0 0 8px #2ea04344;
-      transition: background-color 0.3s ease;
-    }
-    ul.didYouKnow li:hover {
-      background-color: #2a3749;
-    }
-
-    button#surpriseBtn {
-      background: #238636;
+    button {
+      background: linear-gradient(90deg, #ff4500, #ff9933);
       border: none;
-      color: #e6fffa;
-      padding: 16px 45px;
+      padding: 18px 50px;
+      border-radius: 12px;
       font-size: 1.5rem;
       font-weight: 700;
-      border-radius: 40px;
+      color: #120000;
       cursor: pointer;
-      box-shadow: 0 0 20px #2ea043cc;
-      transition: background-color 0.3s ease, box-shadow 0.3s ease;
-      margin-top: 10px;
+      box-shadow: 0 0 15px #ff4500;
+      transition: box-shadow 0.3s ease, transform 0.1s ease;
+      font-family: 'Orbitron', monospace;
       user-select: none;
+      text-shadow: 0 0 4px #660000;
+      margin: 0 10px;
     }
-    button#surpriseBtn:hover {
-      background-color: #2ea043;
-      box-shadow: 0 0 30px #3fdd81;
+    button:hover {
+      box-shadow: 0 0 30px #ff9933;
+      transform: scale(1.05);
+    }
+    button:active {
+      transform: scale(0.95);
+      box-shadow:
+        0 0 40px #ff9933,
+        0 0 60px #ff4500,
+        0 0 80px #cc3300;
     }
 
-    #funText {
-      margin-top: 35px;
-      font-size: 1.7rem;
-      font-weight: 700;
-      color: #a3f7c4;
-      min-height: 70px;
-      text-shadow: 0 0 8px #238636;
-      user-select: none;
-      transition: opacity 0.5s ease;
-    }
-
-    /* Twitter button styling */
-    .twitter-btn {
-      display: inline-flex;
-      align-items: center;
+    .buttons {
+      display: flex;
       justify-content: center;
-      background: #1da1f2;
-      color: white;
-      font-weight: 700;
-      font-size: 1.5rem;
-      padding: 16px 36px;
-      border-radius: 50px;
-      box-shadow: 0 6px 18px rgba(29,161,242,0.9);
-      text-decoration: none;
-      transition: background-color 0.3s ease, box-shadow 0.3s ease;
-      user-select: none;
-      margin: 15px auto 0 auto;
-      max-width: 240px;
-      gap: 12px;
-    }
-    .twitter-btn:hover {
-      background-color: #0d95e8;
-      box-shadow: 0 8px 28px rgba(29,161,242,1);
-      text-decoration: none;
-    }
-    .twitter-btn svg {
-      width: 26px;
-      height: 26px;
-      fill: white;
-      flex-shrink: 0;
+      gap: 20px;
+      z-index: 10;
     }
 
-    footer {
-      background: #161b22;
-      color: #7a8a9c;
+    .floating-quotes {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    .quote {
+      position: absolute;
+      white-space: nowrap;
+      font-size: 1.1rem;
+      color: rgba(255, 153, 51, 0.85);
+      user-select: none;
+      animation-name: floatUp;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      text-shadow:
+        0 0 3px #ff4500,
+        0 0 6px #ff9933,
+        0 0 10px #ff4500;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      font-family: 'Orbitron', monospace;
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(100vh);
+        opacity: 0;
+      }
+      10% {
+        opacity: 0.8;
+      }
+      90% {
+        opacity: 0.8;
+      }
+      100% {
+        transform: translateY(-10vh);
+        opacity: 0;
+      }
+    }
+
+    .emoticon-container {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 40px;
+      z-index: 5;
+      user-select: none;
+    }
+
+    .emoticon-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+      color: #ff4500;
+      text-shadow:
+        0 0 6px #ff4500,
+        0 0 12px #ff9933,
+        0 0 20px #ff4500;
+      transition: transform 0.3s ease;
+      font-size: 3rem;
+      font-family: monospace;
+      user-select: none;
+    }
+
+    .emoticon-wrapper:hover {
+      transform: scale(1.2);
+    }
+
+    .click-me {
       font-size: 1rem;
-      padding: 18px 0;
+      margin-top: 6px;
+      color: #ff9933;
+      text-shadow:
+        0 0 5px #ff9933,
+        0 0 10px #ff4500;
+      font-family: 'Orbitron', monospace;
+      user-select: none;
+    }
+
+    #close-message {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 8vw;
+      color: #ff0000;
+      text-transform: uppercase;
+      font-weight: 900;
+      font-family: 'Orbitron', monospace;
+      text-shadow:
+        0 0 20px #ff0000,
+        0 0 40px #cc0000,
+        0 0 60px #990000;
+      pointer-events: none;
+      user-select: none;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      z-index: 1000;
       text-align: center;
-      border-top: 2px solid #2ea043;
-      user-select: none;
-      box-shadow: inset 0 8px 12px rgba(46,160,67,0.2);
+      padding: 0 10px;
     }
 
-    /* Responsive */
-    @media (max-width: 600px) {
-      h2 {
-        font-size: 2rem;
-      }
-      button#surpriseBtn {
-        font-size: 1.3rem;
-        padding: 14px 35px;
-      }
-      .twitter-btn {
-        font-size: 1.2rem;
-        padding: 12px 20px;
-        max-width: 180px;
-      }
-    }
-
-    /* Images style */
-    .header-img {
-      width: 60px;
-      filter: drop-shadow(0 0 3px #2ea043);
-      user-select: none;
+    #close-message.show {
+      opacity: 1;
+      pointer-events: auto;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>
-      <img src="https://cryptologos.cc/logos/dogecoin-doge-logo.png?v=024" alt="Memecoin" class="header-img" />
-      $ACL
-    </h1>
-    <p>AfterCryptoLife - Your future memecoin 🚀</p>
-  </header>
-  <main>
-    <section>
-      <h2><span class="emoji">💡</span> About the project</h2>
-      <p>$ACL is a memecoin created for the community that believes in the future of cryptocurrencies and having fun on the blockchain. Join us to build unique value together! 😎</p>
-    </section>
 
-    <section>
-      <h2><span class="emoji">🤔</span> Did you know?</h2>
-      <ul class="didYouKnow">
-        <li>Memecoins started as jokes but have created real communities worth billions. 💰</li>
-        <li>$ACL combines fun with future blockchain tech to create a unique experience. 🔗</li>
-        <li>Some memecoins have inspired charity projects and real-world impact. ❤️</li>
-        <li>HODLing $ACL could be your ticket to the next crypto moonshot! 🌕</li>
-      </ul>
-    </section>
+  <div class="floating-quotes" id="quotes-container"></div>
 
-    <section>
-      <button id="surpriseBtn" aria-label="Click for a fun surprise!">Surprise Me! 🎉</button>
-      <div id="funText" aria-live="polite" role="status"></div>
-    </section>
+  <h1 id="pain-text">PAIN</h1>
 
-    <section>
-      <h2><span class="emoji">🐦</span> Follow us</h2>
-      <a href="https://twitter.com/aftercryptolife" target="_blank" rel="noopener noreferrer" class="twitter-btn" aria-label="Follow $ACL on Twitter">
-        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M23.954 4.569c-0.885 0.392-1.83 0.656-2.825 0.775 1.014-0.609 1.794-1.574 2.163-2.724-0.951 0.564-2.005 0.974-3.127 1.195-0.897-0.957-2.178-1.555-3.594-1.555-2.723 0-4.93 2.208-4.93 4.93 0 0.386 0.045 0.762 0.127 1.124-4.094-0.205-7.725-2.165-10.158-5.144-0.425 0.729-0.668 1.577-0.668 2.476 0 1.708 0.87 3.215 2.188 4.099-0.807-0.025-1.566-0.247-2.228-0.616v0.061c0 2.385 1.693 4.374 3.946 4.827-0.413 0.112-0.849 0.171-1.296 0.171-0.317 0-0.626-0.03-0.928-0.086 0.627 1.956 2.444 3.379 4.6 3.42-1.685 1.32-3.808 2.105-6.114 2.105-0.397 0-0.79-0.023-1.176-0.069 2.179 1.397 4.768 2.213 7.557 2.213 9.054 0 14.002-7.506 14.002-14.002 0-0.213-0.005-0.425-0.014-0.636 0.962-0.694 1.797-1.562 2.457-2.549z"/></svg>
-        Follow @aftercryptolife
-      </a>
-    </section>
-  </main>
-  <footer>
-    <p>Contact: contact@aftercryptolife.com</p>
-  </footer>
+  <div class="buttons">
+    <button id="color-btn">FEEL THE PAIN</button>
+    <button id="twitter-btn">FOLLOW ON TWITTER</button>
+  </div>
+
+  <div class="emoticon-container" id="emoticons">
+    <div class="emoticon-wrapper" tabindex="0" data-msg="CLOSE THE WINDOW">
+      💀
+      <div class="click-me">Click me</div>
+    </div>
+    <div class="emoticon-wrapper" tabindex="0" data-msg="Embrace the fire within.">
+      🔥
+      <div class="click-me">Click me</div>
+    </div>
+    <div class="emoticon-wrapper" tabindex="0" data-msg="Hell is empty, and all the devils are here.">
+      😈
+      <div class="click-me">Click me</div>
+    </div>
+  </div>
+
+  <div id="close-message"></div>
 
   <script>
-    const funTexts = [
-      "🚀 $ACL to the moon! 🌕",
-      "Did you hear? $ACL just bought a Lambo! 🏎️💨",
-      "HODL tight! $ACL is going wild! 🐂🔥",
-      "Keep calm and memecoin on with $ACL 😎",
-      "Every time you click, a memecoin gets its wings! 🦄",
-      "Warning: $ACL may cause extreme excitement! ⚡",
-      "Mining $ACL? Nah, we mine memes! 😂",
-      "Join the $ACL party, the blockchain never sleeps! 🎉",
-      "Keep your $ACL close and your memes closer! 🤝",
-      "To the moon and beyond with $ACL! 🌌"
+    const body = document.body;
+    const painText = document.getElementById('pain-text');
+    const colorBtn = document.getElementById('color-btn');
+    const twitterBtn = document.getElementById('twitter-btn');
+    const closeMsg = document.getElementById('close-message');
+
+    const colors = [
+      { bg: '#120000', text: '#ff4500' },   // dark burgundy + bright orange
+      { bg: '#000012', text: '#00ccff' },   // dark navy + bright cyan
+      { bg: '#1a001a', text: '#ff00cc' },   // dark purple + bright pink
+      { bg: '#001a00', text: '#33ff33' },   // dark green + bright lime
+      { bg: '#1a0a00', text: '#ffcc00' }    // dark brown + bright yellow
     ];
 
-    const surpriseBtn = document.getElementById('surpriseBtn');
-    const funTextDiv = document.getElementById('funText');
+    let currentIndex = 0;
 
-    surpriseBtn.addEventListener('click', () => {
-      // Losuj tekst z tablicy
-      const randomIndex = Math.floor(Math.random() * funTexts.length);
-      funTextDiv.style.opacity = 0; // fade out
-      
+    colorBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % colors.length;
+      body.style.backgroundColor = colors[currentIndex].bg;
+      painText.style.color = colors[currentIndex].text;
+
+      painText.style.textShadow = `
+        2px 0 ${colors[currentIndex].text},
+        -2px 0 #ff9933
+      `;
+
+      colorBtn.style.background = `linear-gradient(90deg, ${colors[currentIndex].text}, #ff9933)`;
+      colorBtn.style.boxShadow = `0 0 15px ${colors[currentIndex].text}`;
+      colorBtn.style.color = '#120000';
+      colorBtn.style.textShadow = '0 0 4px #660000';
+
+      // szybki rozbłysk na klik
+      colorBtn.style.transition = 'none';
+      colorBtn.style.boxShadow = `
+        0 0 50px #ffcc00,
+        0 0 80px #ff9900,
+        0 0 100px #ff6600
+      `;
       setTimeout(() => {
-        funTextDiv.textContent = funTexts[randomIndex];
-        funTextDiv.style.opacity = 1; // fade in
-      }, 300);
+        colorBtn.style.transition = 'box-shadow 0.3s ease';
+        colorBtn.style.boxShadow = `0 0 15px ${colors[currentIndex].text}`;
+      }, 150);
+    });
+
+    twitterBtn.addEventListener('click', () => {
+      window.open('https://x.com/aftercryptolife', '_blank');
+    });
+
+    // Floating quotes content
+    const quotes = [
+      "Pain is the price of progress.",
+      "Suffering builds strength.",
+      "Embrace the darkness within.",
+      "Only through pain do we grow.",
+      "Hell is not a place, it's a state of mind.",
+      "Crypto gains come with burning losses.",
+      "No pain, no gain.",
+      "Endure the fire, rise anew.",
+      "In the depths of agony lies power."
+    ];
+
+    const quotesContainer = document.getElementById('quotes-container');
+
+    // Generate floating quotes elements
+    for(let i=0; i < 15; i++) {
+      const quoteEl = document.createElement('div');
+      quoteEl.classList.add('quote');
+      quoteEl.textContent = quotes[i % quotes.length];
+      // random position horizontally across the screen
+      quoteEl.style.left = Math.random() * 100 + 'vw';
+      // random animation duration (12-22 seconds)
+      quoteEl.style.animationDuration = (12 + Math.random() * 10) + 's';
+      // random delay so they don’t all move together
+      quoteEl.style.animationDelay = (-Math.random() * 22) + 's';
+      // random font size between 0.9rem and 1.3rem
+      quoteEl.style.fontSize = (0.9 + Math.random() * 0.4) + 'rem';
+      quotesContainer.appendChild(quoteEl);
+    }
+
+    // Emoticons click logic
+    const emoticons = document.querySelectorAll('.emoticon-wrapper');
+
+    emoticons.forEach(emoticon => {
+      emoticon.addEventListener('click', () => {
+        const msg = emoticon.dataset.msg || 'CLOSE THE WINDOW';
+        closeMsg.textContent = msg;
+        closeMsg.classList.add('show');
+      });
+    });
+
+    closeMsg.addEventListener('click', () => {
+      closeMsg.classList.remove('show');
     });
   </script>
+
 </body>
 </html>
