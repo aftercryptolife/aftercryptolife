@@ -5,125 +5,233 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>$ACL - AfterCryptoLife</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+    
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Poppins', sans-serif;
       margin: 0; padding: 0;
-      background: #121212;
-      color: #f0f0f0;
+      background: linear-gradient(135deg, #0d1117, #161b22);
+      color: #c9d1d9;
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
-      min-height: 100vh;
-      transition: background-color 0.5s ease;
+      transition: background-color 0.7s ease;
     }
+
     header {
-      background: #1e1e1e;
-      padding: 20px;
+      background: linear-gradient(90deg, #238636, #2ea043);
+      padding: 25px 20px;
       text-align: center;
-      border-bottom: 2px solid #00ff99;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
     }
     header h1 {
       margin: 0;
-      font-size: 3rem;
-      color: #00ff99;
-      letter-spacing: 4px;
-      text-shadow: 0 0 8px #00ff99;
+      font-size: 3.8rem;
+      color: #e6fffa;
+      letter-spacing: 6px;
+      text-shadow: 0 0 10px #2ea043;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
     }
+    header p {
+      margin-top: 8px;
+      font-size: 1.4rem;
+      color: #a3f7c4;
+      font-weight: 600;
+    }
+
     main {
       flex: 1;
-      padding: 30px;
-      max-width: 900px;
-      margin: auto;
+      max-width: 850px;
+      margin: 40px auto;
+      padding: 0 20px;
       text-align: center;
     }
+
     section {
-      margin-bottom: 40px;
+      margin-bottom: 50px;
+      background: #161b22dd;
+      padding: 25px 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
     }
+
     h2 {
-      border-bottom: 2px solid #00ff99;
-      padding-bottom: 8px;
-      margin-bottom: 20px;
-      color: #00ff99;
+      font-size: 2.4rem;
+      margin-bottom: 25px;
+      color: #2ea043;
+      text-shadow: 0 0 6px #238636;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
     }
-    a {
-      color: #00ff99;
-      text-decoration: none;
+
+    /* Emoji sizing */
+    h2 span.emoji {
+      font-size: 2.8rem;
     }
-    a:hover {
-      text-decoration: underline;
+
+    p, li {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      color: #c9d1d9;
     }
-    footer {
-      background: #1e1e1e;
-      padding: 15px;
-      text-align: center;
-      font-size: 0.9rem;
-      color: #777;
-      border-top: 2px solid #00ff99;
-    }
-    ul.roadmap {
+
+    ul.didYouKnow {
       list-style: none;
       padding-left: 0;
+      max-width: 650px;
+      margin: 0 auto;
+      text-align: left;
+      color: #a3f7c4;
     }
-    ul.roadmap li {
-      background: #222;
-      margin-bottom: 10px;
-      padding: 12px;
-      border-radius: 6px;
-      border-left: 4px solid #00ff99;
+    ul.didYouKnow li {
+      background: #21262d;
+      padding: 15px 20px;
+      margin-bottom: 15px;
+      border-left: 5px solid #2ea043;
+      border-radius: 10px;
+      box-shadow: inset 0 0 8px #2ea04344;
+      transition: background-color 0.3s ease;
     }
+    ul.didYouKnow li:hover {
+      background-color: #2a3749;
+    }
+
     button#surpriseBtn {
-      background: #00ff99;
+      background: #238636;
       border: none;
-      color: #121212;
-      padding: 15px 30px;
-      font-size: 1.2rem;
-      border-radius: 30px;
+      color: #e6fffa;
+      padding: 16px 45px;
+      font-size: 1.5rem;
+      font-weight: 700;
+      border-radius: 40px;
       cursor: pointer;
-      box-shadow: 0 0 10px #00ff99;
-      transition: background-color 0.3s ease, color 0.3s ease;
-      margin-top: 20px;
+      box-shadow: 0 0 20px #2ea043cc;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      margin-top: 10px;
+      user-select: none;
     }
     button#surpriseBtn:hover {
-      background: #00cc77;
-      color: #e0ffe0;
+      background-color: #2ea043;
+      box-shadow: 0 0 30px #3fdd81;
     }
+
     #funText {
-      margin-top: 30px;
+      margin-top: 35px;
+      font-size: 1.7rem;
+      font-weight: 700;
+      color: #a3f7c4;
+      min-height: 70px;
+      text-shadow: 0 0 8px #238636;
+      user-select: none;
+      transition: opacity 0.5s ease;
+    }
+
+    /* Twitter button styling */
+    .twitter-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: #1da1f2;
+      color: white;
+      font-weight: 700;
       font-size: 1.5rem;
-      font-weight: bold;
-      color: #00ff99;
-      min-height: 60px;
-      text-shadow: 0 0 6px #00ff99;
+      padding: 16px 36px;
+      border-radius: 50px;
+      box-shadow: 0 6px 18px rgba(29,161,242,0.9);
+      text-decoration: none;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      user-select: none;
+      margin: 15px auto 0 auto;
+      max-width: 240px;
+      gap: 12px;
+    }
+    .twitter-btn:hover {
+      background-color: #0d95e8;
+      box-shadow: 0 8px 28px rgba(29,161,242,1);
+      text-decoration: none;
+    }
+    .twitter-btn svg {
+      width: 26px;
+      height: 26px;
+      fill: white;
+      flex-shrink: 0;
+    }
+
+    footer {
+      background: #161b22;
+      color: #7a8a9c;
+      font-size: 1rem;
+      padding: 18px 0;
+      text-align: center;
+      border-top: 2px solid #2ea043;
+      user-select: none;
+      box-shadow: inset 0 8px 12px rgba(46,160,67,0.2);
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      h2 {
+        font-size: 2rem;
+      }
+      button#surpriseBtn {
+        font-size: 1.3rem;
+        padding: 14px 35px;
+      }
+      .twitter-btn {
+        font-size: 1.2rem;
+        padding: 12px 20px;
+        max-width: 180px;
+      }
+    }
+
+    /* Images style */
+    .header-img {
+      width: 60px;
+      filter: drop-shadow(0 0 3px #2ea043);
+      user-select: none;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>$ACL</h1>
-    <p>AfterCryptoLife - Your future memecoin</p>
+    <h1>
+      <img src="https://cryptologos.cc/logos/dogecoin-doge-logo.png?v=024" alt="Memecoin" class="header-img" />
+      $ACL
+    </h1>
+    <p>AfterCryptoLife - Your future memecoin 🚀</p>
   </header>
   <main>
     <section>
-      <h2>About the project</h2>
-      <p>$ACL is a memecoin created for the community that believes in the future of cryptocurrencies and having fun on the blockchain. Join us to build unique value together!</p>
+      <h2><span class="emoji">💡</span> About the project</h2>
+      <p>$ACL is a memecoin created for the community that believes in the future of cryptocurrencies and having fun on the blockchain. Join us to build unique value together! 😎</p>
     </section>
+
     <section>
-      <h2>Roadmap</h2>
-      <ul class="roadmap">
-        <li>Q3 2025 - $ACL memecoin launch</li>
-        <li>Q4 2025 - Listing on first exchanges</li>
-        <li>Q1 2026 - Launch of social platform</li>
-        <li>Q2 2026 - Support for NFTs and blockchain games</li>
+      <h2><span class="emoji">🤔</span> Did you know?</h2>
+      <ul class="didYouKnow">
+        <li>Memecoins started as jokes but have created real communities worth billions. 💰</li>
+        <li>$ACL combines fun with future blockchain tech to create a unique experience. 🔗</li>
+        <li>Some memecoins have inspired charity projects and real-world impact. ❤️</li>
+        <li>HODLing $ACL could be your ticket to the next crypto moonshot! 🌕</li>
       </ul>
     </section>
+
     <section>
-      <h2>Links</h2>
-      <p>Wallet/Exchange: <a href="#" target="_blank" rel="noopener noreferrer">your_wallet_link</a></p>
-      <p>Twitter: <a href="https://twitter.com/aftercryptolife" target="_blank" rel="noopener noreferrer">@aftercryptolife</a></p>
-      <p>Telegram: <a href="https://t.me/aftercryptolife" target="_blank" rel="noopener noreferrer">t.me/aftercryptolife</a></p>
+      <button id="surpriseBtn" aria-label="Click for a fun surprise!">Surprise Me! 🎉</button>
+      <div id="funText" aria-live="polite" role="status"></div>
     </section>
+
     <section>
-      <button id="surpriseBtn">Surprise Me!</button>
-      <div id="funText"></div>
+      <h2><span class="emoji">🐦</span> Follow us</h2>
+      <a href="https://twitter.com/aftercryptolife" target="_blank" rel="noopener noreferrer" class="twitter-btn" aria-label="Follow $ACL on Twitter">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M23.954 4.569c-0.885 0.392-1.83 0.656-2.825 0.775 1.014-0.609 1.794-1.574 2.163-2.724-0.951 0.564-2.005 0.974-3.127 1.195-0.897-0.957-2.178-1.555-3.594-1.555-2.723 0-4.93 2.208-4.93 4.93 0 0.386 0.045 0.762 0.127 1.124-4.094-0.205-7.725-2.165-10.158-5.144-0.425 0.729-0.668 1.577-0.668 2.476 0 1.708 0.87 3.215 2.188 4.099-0.807-0.025-1.566-0.247-2.228-0.616v0.061c0 2.385 1.693 4.374 3.946 4.827-0.413 0.112-0.849 0.171-1.296 0.171-0.317 0-0.626-0.03-0.928-0.086 0.627 1.956 2.444 3.379 4.6 3.42-1.685 1.32-3.808 2.105-6.114 2.105-0.397 0-0.79-0.023-1.176-0.069 2.179 1.397 4.768 2.213 7.557 2.213 9.054 0 14.002-7.506 14.002-14.002 0-0.213-0.005-0.425-0.014-0.636 0.962-0.694 1.797-1.562 2.457-2.549z"/></svg>
+        Follow @aftercryptolife
+      </a>
     </section>
   </main>
   <footer>
@@ -144,31 +252,18 @@
       "To the moon and beyond with $ACL! 🌌"
     ];
 
-    const colors = [
-      "#00ff99", "#ff6f61", "#ffa500", "#1e90ff", "#ff69b4",
-      "#32cd32", "#8a2be2", "#ff4500", "#00ced1", "#ffd700"
-    ];
+    const surpriseBtn = document.getElementById('surpriseBtn');
+    const funTextDiv = document.getElementById('funText');
 
-    const btn = document.getElementById('surpriseBtn');
-    const funText = document.getElementById('funText');
-
-    btn.addEventListener('click', () => {
-      // Pick random text and color
-      const randomText = funTexts[Math.floor(Math.random() * funTexts.length)];
-      const randomColor = colors[Math.floor(Math.random() * colors.length)];
-
-      // Show text
-      funText.textContent = randomText;
-
-      // Change background color with smooth transition
-      document.body.style.backgroundColor = randomColor;
-
-      // Optional: invert text color for better contrast
-      if (randomColor === "#ffd700" || randomColor === "#ffa500") {
-        document.body.style.color = "#121212";
-      } else {
-        document.body.style.color = "#f0f0f0";
-      }
+    surpriseBtn.addEventListener('click', () => {
+      // Losuj tekst z tablicy
+      const randomIndex = Math.floor(Math.random() * funTexts.length);
+      funTextDiv.style.opacity = 0; // fade out
+      
+      setTimeout(() => {
+        funTextDiv.textContent = funTexts[randomIndex];
+        funTextDiv.style.opacity = 1; // fade in
+      }, 300);
     });
   </script>
 </body>
