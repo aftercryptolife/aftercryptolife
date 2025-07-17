@@ -13,6 +13,7 @@
       display: flex;
       flex-direction: column;
       min-height: 100vh;
+      transition: background-color 0.5s ease;
     }
     header {
       background: #1e1e1e;
@@ -22,15 +23,17 @@
     }
     header h1 {
       margin: 0;
-      font-size: 2.5rem;
+      font-size: 3rem;
       color: #00ff99;
-      letter-spacing: 3px;
+      letter-spacing: 4px;
+      text-shadow: 0 0 8px #00ff99;
     }
     main {
       flex: 1;
       padding: 30px;
       max-width: 900px;
       margin: auto;
+      text-align: center;
     }
     section {
       margin-bottom: 40px;
@@ -67,6 +70,30 @@
       border-radius: 6px;
       border-left: 4px solid #00ff99;
     }
+    button#surpriseBtn {
+      background: #00ff99;
+      border: none;
+      color: #121212;
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 0 10px #00ff99;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      margin-top: 20px;
+    }
+    button#surpriseBtn:hover {
+      background: #00cc77;
+      color: #e0ffe0;
+    }
+    #funText {
+      margin-top: 30px;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #00ff99;
+      min-height: 60px;
+      text-shadow: 0 0 6px #00ff99;
+    }
   </style>
 </head>
 <body>
@@ -94,9 +121,55 @@
       <p>Twitter: <a href="https://twitter.com/aftercryptolife" target="_blank" rel="noopener noreferrer">@aftercryptolife</a></p>
       <p>Telegram: <a href="https://t.me/aftercryptolife" target="_blank" rel="noopener noreferrer">t.me/aftercryptolife</a></p>
     </section>
+    <section>
+      <button id="surpriseBtn">Surprise Me!</button>
+      <div id="funText"></div>
+    </section>
   </main>
   <footer>
     <p>Contact: contact@aftercryptolife.com</p>
   </footer>
+
+  <script>
+    const funTexts = [
+      "🚀 $ACL to the moon! 🌕",
+      "Did you hear? $ACL just bought a Lambo! 🏎️💨",
+      "HODL tight! $ACL is going wild! 🐂🔥",
+      "Keep calm and memecoin on with $ACL 😎",
+      "Every time you click, a memecoin gets its wings! 🦄",
+      "Warning: $ACL may cause extreme excitement! ⚡",
+      "Mining $ACL? Nah, we mine memes! 😂",
+      "Join the $ACL party, the blockchain never sleeps! 🎉",
+      "Keep your $ACL close and your memes closer! 🤝",
+      "To the moon and beyond with $ACL! 🌌"
+    ];
+
+    const colors = [
+      "#00ff99", "#ff6f61", "#ffa500", "#1e90ff", "#ff69b4",
+      "#32cd32", "#8a2be2", "#ff4500", "#00ced1", "#ffd700"
+    ];
+
+    const btn = document.getElementById('surpriseBtn');
+    const funText = document.getElementById('funText');
+
+    btn.addEventListener('click', () => {
+      // Pick random text and color
+      const randomText = funTexts[Math.floor(Math.random() * funTexts.length)];
+      const randomColor = colors[Math.floor(Math.random() * colors.length)];
+
+      // Show text
+      funText.textContent = randomText;
+
+      // Change background color with smooth transition
+      document.body.style.backgroundColor = randomColor;
+
+      // Optional: invert text color for better contrast
+      if (randomColor === "#ffd700" || randomColor === "#ffa500") {
+        document.body.style.color = "#121212";
+      } else {
+        document.body.style.color = "#f0f0f0";
+      }
+    });
+  </script>
 </body>
 </html>
